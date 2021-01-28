@@ -6,8 +6,8 @@ import React, { createContext, useState, useEffect } from 'react';
 import io from "socket.io-client";
 import makeToast from "../Toaster";
 
-// const ENDPOINT = "https://strongfitlife-backend.herokuapp.com";
-const ENDPOINT = "http://localhost:8000";
+const ENDPOINT = "https://strongfitlife-backend.herokuapp.com";
+// const ENDPOINT = "http://localhost:8000";
 
 export const AuthContext = createContext();
 
