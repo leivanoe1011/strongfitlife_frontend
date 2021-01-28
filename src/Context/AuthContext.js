@@ -6,6 +6,9 @@ import React, { createContext, useState, useEffect } from 'react';
 import io from "socket.io-client";
 import makeToast from "../Toaster";
 
+// const ENDPOINT = "https://strongfitlife-backend.herokuapp.com";
+const ENDPOINT = "http://localhost:8000";
+
 export const AuthContext = createContext();
 
 export default ({children}) => {
@@ -36,7 +39,7 @@ export default ({children}) => {
             // This will go to the function in the Server where we are 
             // Initializing the IO middleware
             // Below passing the token in the local Storage to the Server and validate
-            const newSocket = io("http://localhost:8000", {
+            const newSocket = io(ENDPOINT, {
                 query: {
                     token: localStorage.getItem("CC_Token"),
                     role: localStorage.getItem("CC_role")

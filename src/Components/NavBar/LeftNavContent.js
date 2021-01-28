@@ -12,7 +12,7 @@ function LeftNav() {
     return (
       <>
         <li className="nav-item">
-          <Link className="nav-link" to="/features">
+          <Link className="nav-link" to="/dashboard">
             MY STORY
           </Link>
         </li>
@@ -31,7 +31,7 @@ function LeftNav() {
         {/* {(role === "admin") ? adminUserNavLinks() : notAdminUserNavLink()} */}
 
         <li className="nav-item">
-          <Link className="nav-link" to="/#features">
+          <Link className="nav-link" to="/dashboard">
             LEFT
           </Link>
         </li>

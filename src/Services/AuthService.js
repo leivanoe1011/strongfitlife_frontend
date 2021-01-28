@@ -7,7 +7,7 @@
 const AuthService = {
 
     logout : async ()=>{
-        const res = await fetch('http://localhost:8000/user/logout');
+        const res = await fetch('/user/logout');
         const data = await res.json();
         return data;
     },
@@ -20,7 +20,7 @@ const AuthService = {
             body : JSON.stringify( {user} )
         }
 
-        const res = await fetch("http://localhost:8000/user/login", requestOptions);
+        const res = await fetch("/user/login", requestOptions);
         const data = await res.json();      
 
         if (data.status !== 401) {
@@ -40,7 +40,7 @@ const AuthService = {
         };
 
         // fetch("",{})
-        const res = await fetch('http://localhost:8000/user/register', requestOptions);
+        const res = await fetch('/user/register', requestOptions);
         const data = await res.json();
         return data;
         
